@@ -21,12 +21,8 @@ paris = sites['Paris']
 
 moscow_london = ((moscow[0] - london[0]) ** 2 + (moscow[1] - london[1]) ** 2) ** .5
 moscow_paris = ((moscow[0] - paris[0]) ** 2 + (moscow[1] - paris[1]) ** 2) ** .5
-
-# london_moscow = ((moscow[0] - london[0]) ** 2 + (moscow[1] - london[1]) ** 2) ** .5
 london_paris = ((london[0] - paris[0]) ** 2 + (london[1] - paris[1]) ** 2) ** .5
 
-# paris_moscow = ((moscow[0] - paris[0]) ** 2 + (moscow[1] - paris[1]) ** 2) ** .5
-# paris_london = ((london[0] - paris[0]) ** 2 + (london[1] - paris[1]) ** 2) ** .5
 
 distances['Moscow'] = {}
 distances['London'] = {}
