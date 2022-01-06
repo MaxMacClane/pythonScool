@@ -46,7 +46,7 @@ sweets = {
         {'shop': 'магнит', 'price': 62.99}
     ],
 }
-# compares the price in dict and chooses lowel one
+# compares the price in dict and chooses lowel
 for r in sweets.keys():
     if r == 'печенье':
         if sweets['печенье'][0]['price'] > sweets['печенье'][1]['price']:
