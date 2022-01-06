@@ -46,6 +46,17 @@ sweets = {
         {'shop': 'магнит', 'price': 62.99}
     ],
 }
+
+for r in sweets.keys():
+    if r == 'печенье':
+        if sweets['печенье'][0]['price'] > sweets['печенье'][1]['price']:
+            cookies_prise = sweets['печенье'][1]['price']
+            print(sweets['печенье'][1]['shop'], cookies_prise)
+        else:
+            cookies_prise = sweets['печенье'][0]['price']
+            cookies_shop = str(sweets['печенье'][0]['shop'])
+            print(*cookies_shop[0].upper(), *cookies_shop[1:], ' - ', cookies_prise, sep='')
+
 print("Карамель", sweets['карамель'][0]["shop"], sweets["карамель"][0]["price"])
 print("Карамель", sweets['карамель'][1]["shop"], sweets['карамель'][1]["price"])
 # Указать надо только по 2 магазина с минимальными ценами
