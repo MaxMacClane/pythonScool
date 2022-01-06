@@ -10,23 +10,19 @@ zoo = ['lion,', 'kangaroo,', 'elephant,', 'monkey,', ]
 zoo.extend(['bear'])
 zoo.insert(1, 'bear,')
 del zoo[-1]
-print(zoo[0], zoo[1], zoo[2], zoo[3], zoo[4])
+print(*zoo)
 
 # добавьте птиц из списка birds в последние клетки зоопарка
 birds = ['rooster', 'ostrich', 'lark', ]
 #  и выведите список на консоль
-zoo.extend(['rooster,', 'ostrich,', 'lark.'])
-print(zoo[0], zoo[1], zoo[2], zoo[3], zoo[4], zoo[5], zoo[6], zoo[7])
+zoo.extend(['rooster,', 'ostrich,', 'lark'])
+print(*zoo)
 
 # уберите слона
 #  и выведите список на консоль
 zoo.remove('elephant,')
-print(zoo[0], zoo[1], zoo[2], zoo[3], zoo[4], zoo[5], zoo[6])
+print(*zoo)
 # выведите на консоль в какой клетке сидит лев (lion) и жаворонок (lark).
 # Номера при выводе должны быть понятны простому человеку, не программисту.
 
-zoo[0] = 'lion cage №1,'
-zoo[6] = 'lark cage №7.'
-print(zoo[0], zoo[6])
-
-
+print('Cage №1 live -', zoo[0], 'Cage №7 live -', zoo[6], '.')
