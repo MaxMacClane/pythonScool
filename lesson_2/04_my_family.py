@@ -11,7 +11,7 @@ print(my_family[0], my_family[1], my_family[2])
 my_family_height = [['mama', 'papa', 'ded'], [168, 188, 190], ['см']]
 my_family_height[0][1] = 'отца'
 
-print(my_family_height[0][1], my_family_height[1][1], my_family_height[2][0])
+print('Рост', my_family_height[0][1], my_family_height[1][1], my_family_height[2][0])
 
 # Выведите на консоль рост отца в формате
 #   Рост отца - ХХ см
