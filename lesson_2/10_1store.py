@@ -27,7 +27,7 @@ store = {
         {'quantity': 43, 'price': 97},
     ],
 }
-# iterating over the keys in the dict.goods
+# iterating over the keys in the dictionary.goods
 for _ in goods.keys():
     # in the store dictionary take the value quantity and the price, calculate total cost for each keys
     # displaying value quantity, price and total cost
