@@ -9,5 +9,10 @@
 #   Целочисленное деление ХХХ на YYY дает ZZZ
 
 a, b = 179, 37
+z = 0
+while a > 37:
+    a = a - 37
+    z += 1
 
-# TODO здесь ваш код
+print('179 divided by 37 - equal', z)
+
