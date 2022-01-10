@@ -28,15 +28,17 @@ x1, y1 = 0, 0
 #         x1 += 100
 #         sd.rectangle(left, right, color=sd.COLOR_YELLOW, width=3)
 
+
+
 # solution with lines function
 # loop draws horizontal lines
 for y in range(0, 650, 50):
     point = [sd.get_point(0, y), sd.get_point(700, y)]
     sd.lines(point, color=sd.COLOR_YELLOW, closed=False, width=3)
-
-# loop draws vertical lines in even lines
+#
+# # loop draws vertical lines in even lines
 for y in range(0, 650, 100):
-    y1 += 100  
+    y1 += 100
     if y == 0:
         y1 = 50
     x1 = 0
@@ -44,15 +46,15 @@ for y in range(0, 650, 100):
         point = [sd.get_point(x, y), sd.get_point(x1, y1)]
         x1 += 100
         sd.lines(point, color=sd.COLOR_YELLOW, closed=False, width=3)
-
-# loop draws vertical lines in odd lines
+#
+# # loop draws vertical lines in odd lines
 for y in range(50, 650, 100):
     y1 += 100
     if y == 50:
         y1 = 100
     x1 = -50
     for x in range(-50, 700, 100):
-        point = [sd.get_point(x, y), sd.get_point(x1, y1)]           
+        point = [sd.get_point(x, y), sd.get_point(x1, y1)]
         x1 += 100
         sd.lines(point, color=sd.COLOR_YELLOW, closed=False, width=3)
 
