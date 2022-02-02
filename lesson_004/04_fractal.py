@@ -2,7 +2,7 @@
 
 import simple_draw as sd
 
-sd.resolution = 1000, 1000
+sd.resolution = 800, 800
 import random
 
 
@@ -29,28 +29,19 @@ import random
 # Возможный результат решения см lesson_004/results/exercise_04_fractal_01.jpg
 
 # можно поиграть -шрифтами- цветами и углами отклонения
-
+# recursion function draws two vectors from the same point with different direction
 def draw_branches(s_point, length, angle):
     if length < 4:
         return
-    # print(length)
-    angle_1 = angle - 30
-    v1 = sd.get_vector(start_point=s_point, angle=angle_1, length=length)
-    v1.draw()
-    angle_2 = angle + 30
-    v2 = sd.get_vector(start_point=s_point, angle=angle_2, length=length)
-    v2.draw()
-    start_v1 = v1.end_point
-    start_v2 = v2.end_point
+    s_point = sd.vector(start=s_point, angle=angle, length=length, width=3, color=sd.random_color())
     _length = length * .75
-    _angle1 = angle - sd.random_number(10, 60)
-    _angle2 = angle - sd.random_number(-60, 10)
-    draw_branches(s_point=start_v1, length=_length, angle=_angle1)
-    draw_branches(s_point=start_v2, length=_length, angle=_angle2)
+    angle_ = angle - 30
+    draw_branches(s_point, length=_length, angle=angle_)
+    angle_ = angle + 30
+    draw_branches(s_point, length=_length, angle=angle_)
 
 
-x, y = 300, 100
-st_point = sd.get_point(x, y)
+st_point = sd.get_point(390, 50)
 _length = 150
 _width = 3
 _angle = 90
