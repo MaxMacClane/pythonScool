@@ -34,8 +34,8 @@ while True:
     point.y -= sd.random_number(0, 30)
 
     for length in range(3, sd.random_number(10, 30), sd.random_number(2, 5)):
-        for point.x in range(sd.random_number(0, 600)):
-            sd.snowflake(center=point, length=length, color=sd.COLOR_WHITE)
+    # for length in range(sd.random_number(0, 600)):
+        sd.snowflake(center=point, length=length, color=sd.COLOR_WHITE)
     if point.y < 10:
         point.y = 600 - sd.random_number(0, 30)
     sd.sleep(0.6)
