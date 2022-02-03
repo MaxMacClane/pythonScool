@@ -2,6 +2,7 @@
 
 import simple_draw as sd
 
+sd.resolution = 600, 600
 
 # На основе кода из практической части реализовать снегопад:
 # - создать списки данных для отрисовки N снежинок
@@ -16,14 +17,29 @@ N = 20
 # sd.sleep()
 # sd.random_number()
 # sd.user_want_exit()
+x, y = 220, 500
 
-# TODO здесь ваш код
+
+def random_valeu(point, namber, condition=False):
+    if condition:
+        point_x = sd.random_number(point, namber)
+        return point_x
+
+
+quantity = 0
+point = sd.get_point(random_valeu(0, 600), y)
 while True:
     sd.clear_screen()
-    pass
-    pass
-    pass
-    sd.sleep(0.1)
+    point.x += sd.random_number(-30, 30)
+    point.y -= sd.random_number(0, 30)
+
+    for length in range(3, sd.random_number(10, 30), sd.random_number(2, 5)):
+        for point.x in range(sd.random_number(0, 600)):
+            sd.snowflake(center=point, length=length, color=sd.COLOR_WHITE)
+    if point.y < 10:
+        point.y = 600 - sd.random_number(0, 30)
+    sd.sleep(0.6)
+
     if sd.user_want_exit():
         break
 
@@ -43,5 +59,3 @@ sd.pause()
 # - сделать сугоб внизу экрана - если снежинка долетает до низа, оставлять её там,
 #   и добавлять новую снежинку
 # Результат решения см https://youtu.be/XBx0JtxHiLg
-
-
