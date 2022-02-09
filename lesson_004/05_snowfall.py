@@ -2,7 +2,7 @@
 
 import simple_draw as sd
 
-sd.resolution = 600, 600
+sd.resolution = 1000, 600
 
 # На основе кода из практической части реализовать снегопад:
 # - создать списки данных для отрисовки N снежинок
@@ -16,19 +16,21 @@ sd.resolution = 600, 600
 # sd.sleep()
 # sd.random_number()
 # sd.user_want_exit()
-N = 5
+N = 10
 x, y = 0, 0
 
 
+# function return randon 'x'and 'y'
 def random_start(condition=False):
-    x = sd.random_number(0, 600)
-    y = sd.random_number(550, 600)
+    x = sd.random_number(0, 1000)
+    y = sd.random_number(650, 660)
     if condition:
         return x
     else:
         return y
 
 
+# function return dict wiht list
 def snowf_value():
     length_list = []
     return {'length': length_list,
@@ -38,28 +40,50 @@ def snowf_value():
 
 
 snowf_lists = []
-
+# loop adds dictionary to list
 for _ in range(N):
     snowf_lists.append(snowf_value())
-    for length in range(1, sd.random_number(20, 30), sd.random_number(2, 30)):
+    for length in range(1, sd.random_number(8, 30), 4):
         # for length in range(sd.random_number(0, 600)):
         snowf_lists[_]['length'].append(length)
-
-    print(snowf_lists)
-
+# infinite loop conditions
 while True:
-    sd.clear_screen()
+    sd.start_drawing()
+    # sd.clear_screen()
 
-    for flake in snowf_lists:
-        x = snowf_lists[0]['x']
-        y = snowf_lists[0]['y']
-        # for length in snowf_lists[0]['length'][4]
-        length = snowf_lists[0]['length'][1]
-        sd.snowflake(center=sd.get_point(x, y), length=length, color=sd.COLOR_WHITE)
-        print(sd.get_point(x,y))
+    # the loop takes data from the list, draws a white snowflake and a blue circle
+    for index, count in enumerate(snowf_lists):
+        for snowf_list in snowf_lists[index]['length']:
+            sd.snowflake(center=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), length=snowf_list,
+                         color=sd.COLOR_WHITE)
+        sd.circle(center_position=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), radius=30,
+                  color=sd.background_color, width=0)
 
-    sd.sleep(0.6)
+        snowf_lists[index]['x'] -= sd.random_number(-20, 20)
+        snowf_lists[index]['y'] -= sd.random_number(10, 20)
 
+    for index, count in enumerate(snowf_lists):
+        for snowf_list in snowf_lists[index]['length']:
+            sd.snowflake(center=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), length=snowf_list,
+                         color=sd.COLOR_WHITE)
+        # list deletion condition
+        if snowf_lists[index]['y'] < sd.random_number(15, 25):
+            snowf_lists.remove(count)
+
+    x += 1
+    # condition for updating the list with data and continuing the snowfall
+    if x % 2 == 0:
+        for _ in range(5):
+            snowf_lists.append(snowf_value())
+
+        for _ in range(len(snowf_lists)):
+            snowf_lists[_]['length'].clear()
+            for length in range(1, sd.random_number(8, 30), 4):
+                # for length in range(sd.random_number(0, 600)):
+                snowf_lists[_]['length'].append(length)
+
+    sd.finish_drawing()
+    sd.sleep(0.2)
     if sd.user_want_exit():
         break
 
