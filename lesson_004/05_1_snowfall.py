@@ -4,7 +4,7 @@ width = 1000
 height = 600
 sd.resolution = (width, height)
 
-N = 5
+N = 10
 
 
 # def start_point():
@@ -65,6 +65,8 @@ while True:
             snowflake['factor_a'],
             snowflake['factor_b'],
             snowflake['factor_c'])
+        if len(snowflakes) > 60:
+            snowflakes.remove(snowflake)
         if snowflake['y'] < sd.randint(15, 30):
 
             snowflakes.remove(snowflake)
