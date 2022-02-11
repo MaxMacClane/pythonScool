@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: python -*-
 import myburger_03 as mb
 # Создать модуль my_burger. В нем определить функции добавления инградиентов:
 #  - булочки
