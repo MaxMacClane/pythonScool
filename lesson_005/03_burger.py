@@ -1,5 +1,6 @@
 # -*- coding: python -*-
-import myburger_03 as mb
+
+import myburger as mb
 # Создать модуль my_burger. В нем определить функции добавления инградиентов:
 #  - булочки
 #  - котлеты
@@ -16,11 +17,11 @@ import myburger_03 as mb
 # Если не хватает инградиентов - создать соответствующие функции в модуле my_burger
 
 mb.bun()
-mb.cutlet()
-mb.cheese()
-mb.cucumber_tomato_salad()
-mb.onion()
-mb.complete_burgur()
+# mb.cutlet()
+# mb.cheese()
+# mb.cucumber_tomato_salad()
+# mb.onion()
+# mb.complete_burgur()
 
 
 
