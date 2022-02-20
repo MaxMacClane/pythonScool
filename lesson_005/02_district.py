@@ -26,3 +26,5 @@ sov_str_h2r2 = ', '.join(sov_h2r2.folks) + '. '
 
 print('In the aria live: ', cen_str_h1_r1, cen_str_h1_r2, cen_str_h2_r1, cen_str_h2_r2,
       sov_str_h2r1, sov_str_h1r2, sov_str_h2r1, sov_str_h2r2)
+
+print('test')
