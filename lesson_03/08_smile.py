@@ -10,7 +10,7 @@ sd.resolution = (1200, 800)
 # Вывести 10 смайликов в произвольных точках экрана.
 
 # draw a circle
-for _ in range(10):
+for _ in range(1):
     point = sd.random_point()
     sd.circle(point, 60, color=sd.random_color(), width=3)
     # set the conditions, the first two draw the eyes, the next two draw the pupils

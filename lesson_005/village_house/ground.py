@@ -1,6 +1,6 @@
 import simple_draw as sd
-heigth = 800
-width = 1600
+heigth = 1200
+width = 2000
 sd.resolution = width, heigth
 
 def ground():

@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-
 import simple_draw as sd
-
-
 
 
 # the function calculates a random number within the specified percentages for the angle and length
@@ -14,7 +11,7 @@ def random_value(value, volum, condition=False):
     return value * ran_val
 # # recursion function draws two vectors from the same point with different direction
 def draw_branches(s_point, length, angle):
-    if length < 3:
+    if length < 5:
         return
     color = sd.COLOR_TREES
     if length < 20:
