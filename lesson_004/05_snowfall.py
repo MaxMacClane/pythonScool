@@ -15,7 +15,7 @@ sd.resolution = 1000, 600
 # sd.snowflake()
 # sd.sleep()
 # sd.random_number()
-# sd.user_want_exit()
+# sd.user_want_exit()05_snowfall.py
 N = 10
 x, y = 0, 0
 

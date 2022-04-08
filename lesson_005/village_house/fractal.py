@@ -11,7 +11,7 @@ def random_value(value, volum, condition=False):
     return value * ran_val
 # # recursion function draws two vectors from the same point with different direction
 def draw_branches(s_point, length, angle):
-    if length < 5:
+    if length < 4:
         return
     color = sd.COLOR_TREES
     if length < 20:
@@ -19,7 +19,7 @@ def draw_branches(s_point, length, angle):
     s_point = sd.vector(start=s_point, angle=angle, length=length, width=5, color=color)
     no_know = int(30 + random_value(30, 400))
     # length *= (.75 + random_value(.75, 200, condition=True))
-    length *= .7
+    length *= .75
     angle_ = angle - no_know
     draw_branches(s_point, length=length, angle=angle_)
     angle_ = angle + no_know

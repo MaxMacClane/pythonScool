@@ -6,7 +6,7 @@ def smale_mane():
     for _ in range(1):
         point = sd.get_point(1460, 270)
         # point = sd.random_point()
-        sd.circle(point, 60, color=sd.random_color(), width=3)
+        sd.circle(point, 60, color=sd.random_color(), width=8)
         # set the conditions, the first two draw the eyes, the next two draw the pupils
         for _ in range(2):
             r = (_ / 1) % 2
