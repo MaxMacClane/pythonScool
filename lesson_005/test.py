@@ -1,7 +1,6 @@
 import simple_draw as sd
 import village_house as vi
 
-
 vi.ground()
 
 st_point = sd.get_point(1600, 100)
@@ -15,7 +14,5 @@ vi.sun()
 vi.wall()
 vi.cloud()
 vi.snowfall()
-vi.snowfall_again()
 
 sd.pause()
-
