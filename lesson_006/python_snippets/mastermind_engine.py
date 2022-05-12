@@ -1,5 +1,6 @@
 from random import randint, random
 from termcolor import cprint
+
 _guess_number = 0
 
 
@@ -19,6 +20,4 @@ def check_number(represented_number, reference):
                 break
             elif ip == ir and ip != reference[indexp]:
                 cows += 1
-    return  cprint("bulls {}, cows {}".format(bulls, cows,), color='red')
-
-
+    return cprint("bulls {}, cows {}".format(bulls, cows, ), color='red')
