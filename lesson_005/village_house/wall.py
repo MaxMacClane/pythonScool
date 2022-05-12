@@ -25,3 +25,7 @@ def wall():
     sd.line(sd.get_point(900, 200), sd.get_point(900, 400), color=sd. COLOR_WHITE, width=5)
     sd.line(sd.get_point(900, 325), sd.get_point(1000, 325), color=sd. COLOR_WHITE, width=5)
 
+wall()
+
+
+sd.pause()
