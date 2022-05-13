@@ -43,7 +43,7 @@
 # Это пример применения SOLID принципа (см https://goo.gl/GFMoaI) в архитектуре программ.
 # Точнее, в этом случае важен принцип единственной ответственности - https://goo.gl/rYb3hT
 
-from mastermind_engine import set_number, check_number
+from python_snippets.mastermind_engine import set_number, check_number
 from termcolor import cprint
 represented_number = 0
 reference = set_number()
