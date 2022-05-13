@@ -20,8 +20,4 @@ def check_number(represented_number, reference):
                 break
             elif ip == ir and ip != reference[indexp]:
                 cows += 1
-    f = bulls, cows
-    return f
-    # return cprint("bulls {}, cows {}".format(bulls, cows, ), color='red')
-
-
+    return cprint("bulls {}, cows {}".format(bulls, cows, ), color='red')
