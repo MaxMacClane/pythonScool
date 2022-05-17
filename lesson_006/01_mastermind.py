@@ -53,7 +53,7 @@ while represented_number != reference:
     represented_number = input("Enter a four-digit number ")
     print('*' * 44)
     move_count += 1
-    check_number(represented_number=represented_number, reference=reference)
+    check_number(represented_number=represented_number, hidden_number=reference)
     if represented_number == reference:
         cprint(" You win! Guessed number is {}".format(reference), 'green', attrs=['underline'])
         cprint("Move count {}".format(move_count), 'green', attrs=['underline'])

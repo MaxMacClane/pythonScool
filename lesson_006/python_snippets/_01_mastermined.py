@@ -21,7 +21,7 @@ while represented_number != reference:
     represented_number = fix_represent()
     print('*' * 44)
     move_count += 1
-    f = check_number(represented_number=represented_number, reference=reference)
+    f = check_number(represented_number=represented_number, hidden_number=reference)
     cprint("bulls {}, cows {}".format(f[0], f[1]), color='red')
     if represented_number == reference:
         cprint(" You win! Guessed number is {}".format(reference), 'green', attrs=['underline'])
