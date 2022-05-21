@@ -34,7 +34,7 @@ elif celect in ["002", "two", "Two", "TWO"]:
             player_response = fix_represent(reference=reference)
 
             move_count += 1
-            f = check_number(represented_number=player_response, hidden_numbe=reference)
+            f = bulls_n_cows(represented_number=player_response, hidden_numbe=reference)
             cprint(" bulls {}, cows {}".format(f[0], f[1]), color='red')
 
             cprint(" Сomputer is playing ", color="cyan")

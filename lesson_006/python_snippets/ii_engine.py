@@ -1,5 +1,3 @@
-from termcolor import cprint
-from random import choice, randint, random
 import mastermind_engine
 
 
