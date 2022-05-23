@@ -14,15 +14,13 @@ N = 10
 #     return sd.get_point(x, y)
 
 
-
-
 def snowflake_gen():
     return {'length': sd.random_number(8, 24),
             'x': sd.randint(10, width - 10),
             'y': height + sd.randint(10, 50),
-            'factor_a': sd.random_number(4, 7) / 10,
-            'factor_b': sd.random_number(4, 7) / 10,
-            'factor_c': sd.random_number(45, 60)
+            'factor_a': sd.random_number(4, 9) / 15,
+            'factor_b': sd.random_number(4, 9) / 15,
+            'factor_c': sd.random_number(15, 120)
             }
 
 
@@ -30,7 +28,6 @@ snowflakes = []
 
 for _ in range(N):
     snowflakes.append(snowflake_gen())
-
 
 # Пригодятся функции
 # sd.get_point()
@@ -65,18 +62,11 @@ while True:
             snowflake['factor_a'],
             snowflake['factor_b'],
             snowflake['factor_c'])
-        if len(snowflakes) > 60:
-            snowflakes.remove(snowflake)
         if snowflake['y'] < sd.randint(15, 30):
-
             snowflakes.remove(snowflake)
-        #     print(snowflake)
     i += 1
     if i % 2 == 0:
-        # new_snowflake = snowflake_gen()
-        # print(new_snowflake)
         snowflakes.append(snowflake_gen())
-        print('\n', snowflakes)
 
     sd.finish_drawing()
     sd.sleep(0.1)

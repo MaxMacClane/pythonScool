@@ -11,7 +11,7 @@ import simple_draw as sd
 
 list_figures = ["Threeangle", "Square", "Pentagon", "Hexagon"]
 
-list_color = [sd.COLOR_RED, sd.COLOR_BLACK, sd.COLOR_WHITE, sd.COLOR_YELLOW, sd.COLOR_PURPLE, sd.COLOR_ORANGE,
+list_color = [sd.COLOR_WHITE, sd.COLOR_BLACK, sd.COLOR_WHITE, sd.COLOR_YELLOW, sd.COLOR_PURPLE, sd.COLOR_ORANGE,
               sd.COLOR_BLUE, sd.COLOR_CYAN, sd.COLOR_GREEN, sd.COLOR_DARK_YELLOW]
 
 
