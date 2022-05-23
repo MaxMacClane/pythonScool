@@ -17,9 +17,9 @@ def wall():
     sd.rectangle(sd.get_point(650, 100), sd.get_point(1200, 500), color=sd.COLOR_YELLOW, width=5)
 
     lest_point = [sd.get_point(640, 520), sd.get_point(1210, 520), sd.get_point(935, 650)]
-    sd.lines(point_list=lest_point, color=sd.COLOR_RED, closed=True, width=50)
+    sd.lines(point_list=lest_point, color=sd.COLOR_WHITE, closed=True, width=50)
     lest_point = [sd.get_point(740, 560), sd.get_point(1110, 560), sd.get_point(935, 620)]
-    sd.lines(point_list=lest_point, color=sd.COLOR_RED, closed=True, width=60)
+    sd.lines(point_list=lest_point, color=sd.COLOR_WHITE, closed=True, width=60)
     sd.square(sd.get_point(800, 200), side=200, color=sd.background_color, width=0)
     sd.square(sd.get_point(800, 200), side=200, color=sd.COLOR_WHITE, width=11)
     sd.line(sd.get_point(900, 200), sd.get_point(900, 400), color=sd. COLOR_WHITE, width=5)

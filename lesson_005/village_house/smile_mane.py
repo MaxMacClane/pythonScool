@@ -58,7 +58,7 @@ def smale_mane():
         point.x = point.x + 45
         point.y = point.y - 10
         end_point = sd.get_point(point.x, point.y - 40)
-        sd.line(point, end_point, color=sd.COLOR_RED, width=10)
+        sd.line(point, end_point, color=sd.COLOR_WHITE, width=10)
         # draw the lower lip
         for _ in range(2):
             r = (_ / 1) % 2
@@ -66,17 +66,17 @@ def smale_mane():
                 point.x = point.x
                 point.y = point.y - 65
                 end_point = sd.get_point(point.x + 40, point.y + 15)
-                sd.line(point, end_point, color=sd.COLOR_RED, width=7)
+                sd.line(point, end_point, color=sd.COLOR_WHITE, width=7)
             elif r == 1:
                 point.x = point.x - 40
                 point.y = point.y + 15
                 end_point = sd.get_point(point.x + 42, point.y - 15)
-                sd.line(point, end_point, color=sd.COLOR_RED, width=7)
+                sd.line(point, end_point, color=sd.COLOR_WHITE, width=7)
         # draw the upper lip
         point.x = point.x
         point.y = point.y
         end_point = sd.get_point(point.x + 80, point.y)
-        sd.line(point, end_point, color=sd.COLOR_RED, width=7)
+        sd.line(point, end_point, color=sd.COLOR_WHITE, width=7)
         # draw body
         point.x = point.x + 40
         point.y = point.y - 33
