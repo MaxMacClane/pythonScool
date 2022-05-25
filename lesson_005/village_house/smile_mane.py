@@ -1,10 +1,11 @@
 import simple_draw as sd
+sd.resolution= 600, 800
 
 
 # draw a circle
 def smale_mane():
     for _ in range(1):
-        point = sd.get_point(1460, 270)
+        point = sd.get_point(460, 270)
         # point = sd.random_point()
         sd.circle(point, 60, color=sd.random_color(), width=8)
         # set the conditions, the first two draw the eyes, the next two draw the pupils
@@ -18,7 +19,7 @@ def smale_mane():
                 point.x = point.x + 50
                 point.y = point.y
                 right = sd.get_point(point.x + 40, point.y + 25)
-            sd.ellipse(point, right, color=sd.COLOR_YELLOW, width=0)
+            sd.ellipse(left_bottom=point, right_top=right, color=sd.COLOR_YELLOW, width=0)
             if r == 0:
                 point.x = point.x + 15
                 point.y = point.y
@@ -111,3 +112,6 @@ def smale_mane():
                 point.y = point.y - 45
                 end_point = sd.get_point(point.x + 60, point.y + 45)
                 sd.line(point, end_point, color=color, width=6)
+smale_mane()
+
+sd.pause()
