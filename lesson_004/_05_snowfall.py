@@ -41,10 +41,10 @@ def snowf_value(amount):
 
 
 c = 0
-# infinite loop conditions
-def snowfleaks(color_list, amount):
+
+def snowfleaks(color_list, amount, speed, quantity_snowflake=True):
     x, y = 0, 0
-    snowf_lists = snowf_value(amount=amount, color=True)
+    snowf_lists = snowf_value(amount=amount)
     while True:
 
         sd.start_drawing()
@@ -55,7 +55,7 @@ def snowfleaks(color_list, amount):
                 sd.snowflake(center=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), length=snowf_list,
                              color=color_list)
 
-            sd.circle(center_position=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), radius=30,
+            sd.circle(center_position=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), radius=40,
                       color=sd.background_color, width=0)
             snowf_lists[index]['x'] -= sd.random_number(-20, 20)
             snowf_lists[index]['y'] -= sd.random_number(10, 20)
@@ -64,30 +64,32 @@ def snowfleaks(color_list, amount):
                 sd.snowflake(center=sd.get_point(snowf_lists[index]['x'], snowf_lists[index]['y']), length=snowf_list,
                              color=color_list)
             # list deletion condition
-            if snowf_lists[index]['y'] < sd.random_number(15, 25):
+            if snowf_lists[index]['y'] < sd.random_number(5, 15):
                 snowf_lists.remove(count)
-                # del snowf_lists[index +1]
-                # del snowf_lists[index +2]
+                if quantity_snowflake == True:
+                        snowf_lists.clear()
+                        s = snowf_value(amount=amount)
+                        snowf_lists += s
 
         x += 1
         # condition for updating the list with data and continuing the snowfall
-        if x % 3 == 0:
-            for _ in range(2):
-                s = snowf_value(amount=amount, color=True)
-                snowf_lists += s
+        if quantity_snowflake == False:
+            if x % 3 == 0:
+                for _ in range(2):
+                    s = snowf_value(amount=amount)
+                    snowf_lists += s
 
-            for _ in range(len(snowf_lists)):
-                snowf_lists[_]['length'].clear()
-                for length in range(1, sd.random_number(8, 30), 4):
-                    # for length in range(sd.random_number(0, 600)):
-                    snowf_lists[_]['length'].append(length)
+                for _ in range(len(snowf_lists)):
+                    snowf_lists[_]['length'].clear()
+                    for length in range(1, sd.random_number(8, 30), 4):
+                        snowf_lists[_]['length'].append(length)
 
         sd.finish_drawing()
-        sd.sleep(0.1)
+        sd.sleep(speed)
         if sd.user_want_exit():
             break
 
-def snowfleaks_multicolor( amount):
+def snowfleaks_multicolor( amount, speed, quantity_snowflake=True):
     x, y = 0, 0
     snowf_lists = snowf_value(amount=amount)
     while True:
@@ -110,25 +112,30 @@ def snowfleaks_multicolor( amount):
             # list deletion condition
             if snowf_lists[index]['y'] < sd.random_number(15, 25):
                 snowf_lists.remove(count)
+                if quantity_snowflake == True:
+                        snowf_lists.clear()
+                        s = snowf_value(amount=amount)
+                        snowf_lists += s
 
                 # del snowf_lists[index +1]
                 # del snowf_lists[index +2]
 
         x += 1
         #condition for updating the list with data and continuing the snowfall
-        if x % 3 == 0:
-            for _ in range(2):
-                s = snowf_value(amount=amount)
-                snowf_lists += s
+        if quantity_snowflake == False:
+            if x % 3 == 0:
+                for _ in range(2):
+                    s = snowf_value(amount=amount)
+                    snowf_lists += s
 
-            for _ in range(len(snowf_lists)):
-                snowf_lists[_]['length'].clear()
-                for length in range(1, sd.random_number(8, 30), 4):
-                    # for length in range(sd.random_number(0, 600)):
-                    snowf_lists[_]['length'].append(length)
+                for _ in range(len(snowf_lists)):
+                    snowf_lists[_]['length'].clear()
+                    for length in range(1, sd.random_number(8, 30), 4):
+                        # for length in range(sd.random_number(0, 600)):
+                        snowf_lists[_]['length'].append(length)
 
         sd.finish_drawing()
-        sd.sleep(0.1)
+        sd.sleep(speed)
         if sd.user_want_exit():
             break
 # подсказка! для ускорения отрисовки можно
