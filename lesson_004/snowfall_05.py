@@ -1,11 +1,11 @@
 import simple_draw as sd
-
-N = 10 # количество снежинок
+sd.resolution=1080, 600
+N = 20 # количество снежинок
 
 def snowflake_gen():# функция создаёт словарь с данными для снежинки
     return {'length': sd.random_number(8, 24), # рандомная длина лучей
-            'x': sd.randint(10, 440),   # рандомная точка "х"
-            'y': 550 + sd.randint(10, 50),# рандомная точка "у"
+            'x': sd.randint(10, 1100),   # рандомная точка "х"
+            'y': 850 + sd.randint(10, 50),# рандомная точка "у"
             'factor_a': sd.random_number(4, 7) / 10,# рандомный фактор
             'factor_b': sd.random_number(4, 7) / 10,# рандомный фактор
             'factor_c': sd.random_number(45, 60)# рандомный фактор
@@ -53,5 +53,7 @@ def snowfall_again():
         if sd.user_want_exit():
             break
 
+
+snowfall_again()
 
 sd.pause()
