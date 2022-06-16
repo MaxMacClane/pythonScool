@@ -63,6 +63,6 @@ elif quantity == 0:  # условие отрисовки снегопада за
     snow.snowfleaks(color_list=color_list_tuple[color_list],amount=2,speed=speed,quantity_snowflake=False)
 elif 1 <= quantity <= 100:  # условия отрисовки снежинок выбранного цвета и количества
     snow.snowfleaks(color_list=color_list_tuple[color_list],amount=quantity,speed=speed,quantity_snowflake=True)
-
+f = 0
 sd.pause()
 
